@@ -1,0 +1,41 @@
+<%= render "shared/errors", obj: @student %>
+<div class="container">
+  <div class="row center">
+    <div class="col s12 m12 l12">
+      <div class="card-panel">
+        <h3 class="center-align"><%= @student.new_record? ? "Sign Up!": "Edit your profile" %></h3>
+        <%= form_for @student do |f| %>
+          <div class="row">
+            <div class="input-field col s12">
+              <%= f.text_field :name, placeholder: "Enter your full name" %>
+              <%= f.label :name %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <%= f.email_field :email, placeholder: "Enter your email" %>
+                <%= f.label :email %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <%= f.password_field :password, placeholder: "Choose a password" %>
+                <%= f.label :password %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <%= f.password_field :password_confirmation, placeholder: "Confirmation password" %>
+                <%= f.label :password_confirmation %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <%= f.submit "Submit" ,class: "btn pink waves-effect waves-light" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row center">
+    <div class="col s12 m12 l12">
+      <div class="card-panel">
+        <h3 class="center-align">Log In</h3>
+        <%= form_for :logins do |f| %>
+          <div class="row">
+            <div class="input-field col s12">
+              <%= f.email_field :email, placeholder: "Enter your email" %>
+                <%= f.label :email %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <%= f.password_field :password, placeholder: "Enter your password" %>
+                <%= f.label :password %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <%= f.submit "Log In" ,class: "btn pink waves-effect waves-light" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
